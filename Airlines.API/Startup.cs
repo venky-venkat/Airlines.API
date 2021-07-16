@@ -40,6 +40,8 @@ namespace Airlines.API
             services.AddTransient<IAirlines, AirlineRepository>();
             services.AddTransient<IFlight, FlightRepository>();
             services.AddTransient<IFlightBL, FlightBusinessLogic>();
+            services.AddTransient<IBooking, BookingRepository>();
+            services.AddTransient<IBookingBL, BookingBusinessLogic>();
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
